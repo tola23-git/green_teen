@@ -1,0 +1,104 @@
+green-ten/
+│
+├── node_modules/
+│
+├── public/
+│   │
+│   ├── images/
+│   │   │
+│   │   ├── logo/
+│   │   │   └── green-ten-logo.png
+│   │   │
+│   │   ├── hero/
+│   │   │   ├── background.png
+│   │   │   └── character.png
+│   │   │
+│   │   ├── players/
+│   │   │   ├── player-1.png
+│   │   │   ├── player-2.png
+│   │   │   └── player-3.png
+│   │   │
+│   │   └── gallery/
+│   │       ├── match-1.png
+│   │       ├── match-2.png
+│   │       └── team.png
+│   │
+│   └── favicon.ico
+│
+│
+├── src/
+│   │
+│   ├── app/
+│   │   │
+│   │   ├── layout.tsx
+│   │   │
+│   │   ├── page.tsx
+│   │   │
+│   │   ├── globals.css
+│   │   │
+│   │   ├── team/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── achievements/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── gallery/
+│   │   │   └── page.tsx
+│   │   │
+│   │   └── contact/
+│   │       └── page.tsx
+│   │
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Footer.tsx
+│   │   │
+│   │   ├── home/
+│   │   │   ├── Hero.tsx
+│   │   │   ├── About.tsx
+│   │   │   └── TeamPreview.tsx
+│   │   │
+│   │   ├── players/
+│   │   │   ├── PlayerCard.tsx
+│   │   │   └── PlayerList.tsx
+│   │   │
+│   │   ├── achievement/
+│   │   │   └── AchievementCard.tsx
+│   │   │
+│   │   └── gallery/
+│   │       └── GalleryCard.tsx
+│   │
+│   │
+│   ├── data/
+│   │   │
+│   │   ├── players.ts
+│   │   ├── achievements.ts
+│   │   └── team.ts
+│   │
+│   │
+│   ├── types/
+│   │   │
+│   │   ├── player.ts
+│   │   └── achievement.ts
+│   │
+│   │
+│   ├── lib/
+│   │   └── utils.ts
+│   │
+│   └── hooks/
+│       └── useAnimation.ts
+│
+│
+├── package.json
+│
+├── tsconfig.json
+│
+├── tailwind.config.ts
+│
+├── next.config.ts
+│
+├── eslint.config.mjs
+│
+└── README.md
