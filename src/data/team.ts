@@ -54,7 +54,7 @@ export const team: Team = {
       nickname: "To",
       role: "Exp",
       image: "https://res.cloudinary.com/bvvlkx40/image/upload/v1790673701/Tola.png",
-      description: "No one can bit you if you do not give they bit ",
+      description: "Mistake is the lesson ",
     },
   ],
 };
