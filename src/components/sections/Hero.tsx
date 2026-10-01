@@ -40,7 +40,7 @@ export default function Hero() {
   const bgColor = useTransform(
     scrollYProgress,
     [0, 1],
-    ["#000000", "#03200f"],
+    ["#064e2b", "#03200f"],
   );
 
   const glowOpacity = useTransform(scrollYProgress, [0.2, 0.9], [0, 1]);
@@ -57,7 +57,7 @@ export default function Hero() {
       style={{ backgroundColor: bgColor }}
       className="relative h-[200vh]"
     >
-      <div className="sticky top-0 h-[70vh] overflow-hidden md:h-screen">
+      <div className="sticky top-0 h-dvh overflow-hidden md:h-screen">
         {/* Green glow behind the image */}
         <motion.div
           style={{ opacity: glowOpacity }}
@@ -76,14 +76,14 @@ export default function Hero() {
 
           <div className="absolute inset-0 bg-linear-to-t from-green-950/90 via-green-950/20 to-transparent" />
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-end pb-8 text-center md:pb-[3vw]">
+          <div className="relative z-10 flex h-full flex-col items-center justify-end pb-10 text-center md:pb-[3vw]">
             <motion.h1
               variants={textVariants(0.1)}
               initial="hide"
               animate={state}
               className="
                 font-brand
-                text-5xl
+                text-[clamp(3.5rem,14vw,7rem)]
                 md:text-[11vw]
                 leading-none
                 tracking-wider
@@ -103,7 +103,7 @@ export default function Hero() {
               className="mt-3 flex items-center gap-3 md:mt-[1.5vw] md:gap-[1.5vw]"
             >
               <span className="h-px w-8 bg-green-400 md:w-[6vw]" />
-              <p className="font-tech text-xs tracking-wider text-white md:text-[2.2vw]">
+              <p className="font-tech text-sm font-semibold tracking-[0.16em] text-white md:text-xl md:tracking-[0.2em]">
                 {team.game}
               </p>
               <span className="h-px w-8 bg-green-400 md:w-[6vw]" />
