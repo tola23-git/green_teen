@@ -2,8 +2,8 @@ export type Person = {
   name: string;
   nickname: string;
   role: string;
-  image: string;
-  description: string;
+  image?: string;
+  caption: string;
 };
 
 export type Team = {

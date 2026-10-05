@@ -6,10 +6,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-    
       <TeamShowcase />
-    
-          <Closing />
+      <Closing />
     </main>
   );
 }

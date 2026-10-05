@@ -1,0 +1,35 @@
+export const images = {
+  teamCover:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184978/team_cv.png",
+
+  leader:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184665/boss.png",
+
+  phout:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184690/phot.png",
+
+  tock:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184686/tock.png",
+
+  shogun:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184692/sukun.png",
+
+  aiyZang:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184699/xang.png",
+
+  pepey:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791186673/peypey.png",
+
+  airNoy:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184684/noy.png",
+
+  namfon:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184680/namwarn.png",
+
+  mitch:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184678/mith.png",
+
+  tola:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184700/tola.png",
+
+};

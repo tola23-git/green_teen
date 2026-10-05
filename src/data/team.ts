@@ -1,60 +1,91 @@
 import { Team } from "@/types/team";
+import { images } from "@/constants/images";
 
 export const team: Team = {
   name: "GREEN TEEN",
   game: "Mobile Legends Esports Team",
-  coverImage: "https://res.cloudinary.com/bvvlkx40/image/upload/v1790669980/team_cover.jpg",
+
+  coverImage: images.teamCover,
 
   leader: {
-    name: "Phout ",
-    nickname: "Phut",
+    name: "Air",
+    nickname: "Air",
     role: "Gold lane",
-    image: "/leader.png",
-    description: "Leading the team with strategy, discipline and teamwork.",
+    image: images.leader,
+    caption: "ນຳທີມດ້ວຍຍຸດທະສາດ ແລະ ຄວາມສາມັກຄີ",
   },
 
   members: [
     {
+      name: "Phout",
+      nickname: "Phout",
+      role: "Exp",
+      image: images.phout,
+      caption: "ສ້າງໂອກາດ ແລະ ຢືນຢູ່ຂ້າງທີມສະເໝີ",
+    },
+
+    {
+      name: "Tock",
+      nickname: "Tock",
+      role: "Exp",
+      image: images.tock,
+      caption: "ບໍ່ຍອມແພ້ ຈົນກວ່າຈະຊະນະ",
+    },
+
+    {
       name: "Shogun",
       nickname: "Shogun",
       role: "Jungler",
-      image: "/player1.png",
-      description: "Specialized in fast decision making and game control.",
+      image: images.shogun,
+      caption: "ຕັດສິນໃຈໄວ ຄວບຄຸມເກມໄດ້",
     },
+
     {
-      name: "Aiy Zang ",
-      nickname: "Aiy ",
+      name: "Aiy Zang",
+      nickname: "Aiy",
       role: "Exp",
-      image: "/player2.png",
-      description: "Focused on damage output and team fights.",
+      image: images.aiyZang,
+      caption: "ແຮງເຕັມທີ່ ທຸກການຕໍ່ສູ້",
     },
+
     {
-      name: "pepey",
+      name: "Pepey",
       nickname: "Peypey",
       role: "Mid Lane",
-      image: "/player3.png",
-      description: "Creates opportunities and supports the team.",
+      image: images.pepey,
+      caption: "ສ້າງຈັງຫວະ ນຳພາໄຊຊະນະ",
     },
-     {
-      name: "Air Air",
-      nickname: "Air",
-      role: "Exp",
-      image: "/player3.png",
-      description: "Creates opportunities and supports the team.",
-    },
-     {
-      name: "Air Noy",
+
+    {
+      name: " Noy",
       nickname: "Noy",
       role: "Roam",
-      image: "/player3.png",
-      description: "Creates opportunities and supports the team.",
+      image: images.airNoy,
+      caption: "ປົກປ້ອງທີມ ດ້ວຍໃຈເຕັມຮ້ອຍ",
     },
-     {
+
+    {
+      name: "Namfon",
+      nickname: "Namfon",
+      role: "Exp",
+      image: images.namfon,
+      caption: "ຄວາມຜິດພາດຄືບົດຮຽນ",
+    },
+
+    {
+      name: "Mitch",
+      nickname: "Mitch",
+      role: "Exp",
+      image: images.mitch,
+      caption: "ຮຽນຮູ້ຈາກຄວາມຜິດພາດ ແລ້ວແຂງແກ່ນຂຶ້ນ",
+    },
+
+    {
       name: "Tola",
       nickname: "To",
       role: "Exp",
-      image: "https://res.cloudinary.com/bvvlkx40/image/upload/v1790673701/Tola.png",
-      description: "Mistake is the lesson ",
+      image: images.tola,
+      caption: "ເຈົ້າຄຽດຫວາ ຂ້ອຍເປັນກົບ",
     },
   ],
 };

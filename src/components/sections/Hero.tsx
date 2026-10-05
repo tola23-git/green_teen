@@ -1,40 +1,33 @@
 "use client";
 
-import { team } from "@/data/team";
 import {
+  AnimatePresence,
   motion,
-  useMotionValueEvent,
+  useInView,
   useScroll,
   useTransform,
 } from "motion/react";
-import { useRef, useState } from "react";
-
-const textVariants = (delay: number) => ({
-  hide: {
-    opacity: 0,
-    y: -60,
-    filter: "blur(16px)",
-    transition: { duration: 0.5 },
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 1, delay, ease: "easeOut" as const },
-  },
-});
+import { useCallback, useRef, useState } from "react";
+import { team } from "@/data/team";
+import IntroCountdown from "./hero/IntroCountdown";
+import { burstVariants, pulseVariants } from "./hero/posterVariants";
+import ExplodedPoster from "./hero/ExplodedPoster";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [showText, setShowText] = useState(true);
+  const stickyRef = useRef<HTMLDivElement>(null);
+
+  const inView = useInView(stickyRef, { amount: 0.6 });
+
+  // Poster animation starts only after the 3-2-1 intro finishes
+  const [ready, setReady] = useState(false);
+  const handleDone = useCallback(() => setReady(true), []);
+
+  const state = inView && ready ? "show" : "hide";
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (value) => {
-    setShowText(value < 0.1);
   });
 
   const bgColor = useTransform(
@@ -49,66 +42,60 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0.3, 1], [1, 0]);
   const radius = useTransform(scrollYProgress, [0, 1], [0, 48]);
 
-  const state = showText ? "show" : "hide";
-
   return (
     <motion.section
       ref={sectionRef}
       style={{ backgroundColor: bgColor }}
       className="relative h-[200vh]"
     >
-      <div className="sticky top-0 h-dvh overflow-hidden md:h-screen">
+      <div
+        ref={stickyRef}
+        className="sticky top-0 h-dvh overflow-hidden md:h-screen"
+      >
         {/* Green glow behind the image */}
         <motion.div
           style={{ opacity: glowOpacity }}
           className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-500/25 blur-[160px]"
         />
 
+        {/* Intro countdown 3 2 1 */}
+        <AnimatePresence>
+          {!ready && (
+            <IntroCountdown key="intro" active={inView} onDone={handleDone} />
+          )}
+        </AnimatePresence>
+
         <motion.div
           style={{ scale, opacity, borderRadius: radius }}
           className="relative h-full w-full overflow-hidden"
         >
-          <img
-            src={team.coverImage}
-            alt={team.name}
-            className="absolute inset-0 h-full w-full object-cover"
+          {/* Desktop-only background matching the poster colors */}
+          <div className="pointer-events-none absolute inset-0 hidden md:block">
+            <div className="absolute inset-0 bg-linear-to-b from-[#070c18] via-[#04140c] to-[#03200f]" />
+            <div className="absolute left-1/2 top-[40%] h-[70vh] w-[55vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-500/30 blur-[140px]" />
+            <div className="absolute -left-40 top-1/3 h-[500px] w-[500px] rounded-full bg-green-600/20 blur-[140px]" />
+            <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-emerald-500/20 blur-[140px]" />
+            <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(34,197,94,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.15)_1px,transparent_1px)] [background-size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+          </div>
+
+          {/* 1. Glow burst at the start of the explosion */}
+          <motion.div
+            variants={burstVariants}
+            initial="hide"
+            animate={state}
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-400/60 blur-[100px]"
           />
 
-          <div className="absolute inset-0 bg-linear-to-t from-green-950/90 via-green-950/20 to-transparent" />
+          {/* 2. Exploded view: tiles fly in and assemble the poster */}
+          <ExplodedPoster state={state} src={team.coverImage} alt={team.name} />
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-end pb-10 text-center md:pb-[3vw]">
-            <motion.h1
-              variants={textVariants(0.1)}
-              initial="hide"
-              animate={state}
-              className="
-                font-brand
-                text-[clamp(3.5rem,14vw,7rem)]
-                md:text-[11vw]
-                leading-none
-                tracking-wider
-                -skew-x-6
-                bg-linear-to-b from-white via-green-300 to-green-500
-                bg-clip-text text-transparent
-                drop-shadow-[0_0_25px_rgba(34,197,94,0.8)]
-              "
-            >
-              {team.name}
-            </motion.h1>
-
-            <motion.div
-              variants={textVariants(0.5)}
-              initial="hide"
-              animate={state}
-              className="mt-3 flex items-center gap-3 md:mt-[1.5vw] md:gap-[1.5vw]"
-            >
-              <span className="h-px w-8 bg-green-400 md:w-[6vw]" />
-              <p className="font-tech text-sm font-semibold tracking-[0.16em] text-white md:text-xl md:tracking-[0.2em]">
-                {team.game}
-              </p>
-              <span className="h-px w-8 bg-green-400 md:w-[6vw]" />
-            </motion.div>
-          </div>
+          {/* 3. Soft flash when assembled */}
+          <motion.div
+            variants={pulseVariants}
+            initial="hide"
+            animate={state}
+            className="pointer-events-none absolute inset-0 z-20 bg-green-300"
+          />
         </motion.div>
       </div>
     </motion.section>
