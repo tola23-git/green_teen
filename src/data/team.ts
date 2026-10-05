@@ -87,5 +87,12 @@ export const team: Team = {
       image: images.tola,
       caption: "ເຈົ້າຄຽດຫວາ ຂ້ອຍເປັນກົບ",
     },
+    {
+      name: "jo",
+      nickname: "jo",
+      role: "Exp",
+      image: images.jo,
+      caption: "ຄວາມພະຍາຍາມ ບໍ່ເຄີຍທຳລາຍໃຜ",
+    },
   ],
 };

@@ -31,5 +31,7 @@ export const images = {
 
   tola:
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184700/tola.png",
+    jo:
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184674/jo.png",
 
 };
