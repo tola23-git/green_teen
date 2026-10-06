@@ -18,7 +18,7 @@ export const team: Team = {
     {
       name: "Phout",
       nickname: "Phout",
-      role: "Public Relations",
+      role: "Public Relations Manager",
       image: images.phout,
     },
     {
@@ -36,7 +36,7 @@ export const team: Team = {
     {
       name: "XANGNAM",
       nickname: "Aiy",
-      role: "R&D",
+      role: "R&D Manager",
       image: images.aiyZang,
     },
     {
@@ -75,6 +75,5 @@ export const team: Team = {
       role: "Intern BackEnd Developer",
       image: images.jo,
     },
-   
   ],
 };

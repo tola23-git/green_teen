@@ -58,9 +58,8 @@ export default function TeamShowcaseInfo({
             {/* Divider (mobile only) */}
             <div className="mt-4 h-0.5 w-12 rounded-full bg-green-500 md:hidden" />
 
-            {/* Role (replaces caption) */}
+            {/* Position */}
             <p className="mt-4 max-w-[320px] font-tech text-xl leading-relaxed text-green-300 md:mt-5 md:max-w-lg md:text-3xl">
-              Role:{" "}
               {roleParts.map((part, i) => (
                 <Fragment key={i}>
                   {i > 0 && (
