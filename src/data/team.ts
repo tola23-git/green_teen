@@ -10,89 +10,71 @@ export const team: Team = {
   leader: {
     name: "Air",
     nickname: "Air",
-    role: "Gold lane",
+    role: "COO",
     image: images.leader,
-    caption: "ນຳທີມດ້ວຍຍຸດທະສາດ ແລະ ຄວາມສາມັກຄີ",
   },
 
   members: [
     {
       name: "Phout",
       nickname: "Phout",
-      role: "Exp",
+      role: "Public Relations",
       image: images.phout,
-      caption: "ສ້າງໂອກາດ ແລະ ຢືນຢູ່ຂ້າງທີມສະເໝີ",
     },
-
     {
       name: "Tock",
       nickname: "Tock",
-      role: "Exp",
+      role: "Frontline Support",
       image: images.tock,
-      caption: "ບໍ່ຍອມແພ້ ຈົນກວ່າຈະຊະນະ",
     },
-
     {
       name: "Shogun",
       nickname: "Shogun",
-      role: "Jungler",
+      role: "BackEnd Developer",
       image: images.shogun,
-      caption: "ຕັດສິນໃຈໄວ ຄວບຄຸມເກມໄດ້",
     },
-
     {
-      name: "Aiy Zang",
+      name: "XANGNAM",
       nickname: "Aiy",
-      role: "Exp",
+      role: "R&D",
       image: images.aiyZang,
-      caption: "ແຮງເຕັມທີ່ ທຸກການຕໍ່ສູ້",
     },
-
     {
       name: "Pepey",
       nickname: "Peypey",
-      role: "Mid Lane",
+      role: "Sales & Marketing",
       image: images.pepey,
-      caption: "ສ້າງຈັງຫວະ ນຳພາໄຊຊະນະ",
     },
-
     {
-      name: " Noy",
+      name: "Noy",
       nickname: "Noy",
-      role: "Roam",
+      role: "Mobile Developer",
       image: images.airNoy,
-      caption: "ປົກປ້ອງທີມ ດ້ວຍໃຈເຕັມຮ້ອຍ",
     },
-
     {
       name: "Namfon",
       nickname: "Namfon",
-      role: "Exp",
+      role: "QC Tester & IT Support",
       image: images.namfon,
-      caption: "ຄວາມຜິດພາດຄືບົດຮຽນ",
     },
-
     {
       name: "Mitch",
       nickname: "Mitch",
-      role: "Exp",
+      role: "Mobile Developer",
       image: images.mitch,
-      caption: "ຮຽນຮູ້ຈາກຄວາມຜິດພາດ ແລ້ວແຂງແກ່ນຂຶ້ນ",
     },
-
     {
       name: "Tola",
       nickname: "To",
-      role: "Exp",
+      role: "Intern Mobile Developer",
       image: images.tola,
-      caption: "ເຈົ້າຄຽດຫວາ ຂ້ອຍເປັນກົບ",
     },
     {
-      name: "jo",
+      name: "Jo",
       nickname: "jo",
-      role: "Exp",
+      role: "Intern BackEnd Developer",
       image: images.jo,
-      caption: "ຄວາມພະຍາຍາມ ບໍ່ເຄີຍທຳລາຍໃຜ",
     },
+   
   ],
 };

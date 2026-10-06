@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
-import { laoFont } from "./laoFont";
+import { Fragment } from "react";
 import { textVariants, type Slide } from "./teamShowcase";
 
 type Props = {
@@ -18,6 +18,9 @@ export default function TeamShowcaseInfo({
   inView,
 }: Props) {
   const [firstName, ...restName] = slide.name.split(" ");
+
+  // Split the role on "&" so the symbol can use a nicer font
+  const roleParts = slide.role.split("&");
 
   return (
     <div className="order-2 w-full text-center md:order-1 md:-translate-y-10 md:text-left">
@@ -55,23 +58,19 @@ export default function TeamShowcaseInfo({
             {/* Divider (mobile only) */}
             <div className="mt-4 h-0.5 w-12 rounded-full bg-green-500 md:hidden" />
 
-            {/* Caption with « » */}
-            <p
-              className={`${laoFont.className} mt-4 flex max-w-[320px] items-start justify-center gap-2 text-xl leading-relaxed text-green-300 md:mt-5 md:max-w-lg md:justify-start md:gap-3 md:text-3xl`}
-            >
-              <span
-                aria-hidden="true"
-                className="font-brand text-2xl leading-none text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] md:text-4xl"
-              >
-                «
-              </span>
-              <span>{slide.caption}</span>
-              <span
-                aria-hidden="true"
-                className="font-brand text-2xl leading-none text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] md:text-4xl"
-              >
-                »
-              </span>
+            {/* Role (replaces caption) */}
+            <p className="mt-4 max-w-[320px] font-tech text-xl leading-relaxed text-green-300 md:mt-5 md:max-w-lg md:text-3xl">
+              Role:{" "}
+              {roleParts.map((part, i) => (
+                <Fragment key={i}>
+                  {i > 0 && (
+                    <span className="mx-1 inline-block font-brand text-[1.15em] leading-none text-green-400">
+                      &amp;
+                    </span>
+                  )}
+                  {part.trim()}
+                </Fragment>
+              ))}
             </p>
           </motion.div>
         )}

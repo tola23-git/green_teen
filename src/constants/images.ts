@@ -18,7 +18,7 @@ export const images = {
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184699/xang.png",
 
   pepey:
-    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791186673/peypey.png",
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791265259/p1.png",
 
   airNoy:
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184684/noy.png",

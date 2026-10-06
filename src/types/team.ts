@@ -3,7 +3,6 @@ export type Person = {
   nickname: string;
   role: string;
   image?: string;
-  caption: string;
 };
 
 export type Team = {

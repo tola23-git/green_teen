@@ -37,17 +37,11 @@ export default function MemberInfo({ member, reverse }: Props) {
 
       <motion.div {...reveal(0.3)} className="mt-5 flex items-center gap-3">
         <span className="h-1 w-10 bg-green-500" />
-        <p className="font-brand text-3xl uppercase tracking-widest text-green-400 md:text-7xl">
-          {member.role}
+        <p className="font-tech text-xl font-semibold tracking-widest md:text-5xl">
+          <span className="text-green-400">Role:</span>{" "}
+          <span className="text-white">{member.role}</span>
         </p>
       </motion.div>
-
-      <motion.p
-        {...reveal(0.45)}
-        className="mt-5 max-w-md text-sm leading-relaxed text-gray-400 md:text-lg"
-      >
-        {member.caption}
-      </motion.p>
     </div>
   );
 }
