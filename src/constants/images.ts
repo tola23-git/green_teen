@@ -21,10 +21,10 @@ export const images = {
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791265259/p1.png",
 
   airNoy:
-    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184684/noy.png",
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791265958/p2-Photoroom.png",
 
   namfon:
-    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184680/namwarn.png",
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791266048/p3-Photoroom.png",
 
   mitch:
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184678/mith.png",
