@@ -37,13 +37,6 @@ export default function LeaderInfo({ leader }: Props) {
           {leader.role}
         </p>
       </motion.div>
-
-      <motion.p
-        {...reveal(0.45)}
-        className="mt-6 max-w-md text-base leading-relaxed text-gray-400 md:mt-8 md:text-lg"
-      >
-        {leader.caption}
-      </motion.p>
     </div>
   );
 }
