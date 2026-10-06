@@ -15,12 +15,21 @@ export const team: Team = {
   },
 
   members: [
+    // Managers
     {
       name: "Phout",
       nickname: "Phout",
       role: "Public Relations Manager",
       image: images.phout,
     },
+    {
+      name: "XANGNAM",
+      nickname: "Aiy",
+      role: "R&D Technical Manager",
+      image: images.aiyZang,
+    },
+
+    // Team members
     {
       name: "Tock",
       nickname: "Tock",
@@ -32,12 +41,6 @@ export const team: Team = {
       nickname: "Shogun",
       role: "BackEnd Developer",
       image: images.shogun,
-    },
-    {
-      name: "XANGNAM",
-      nickname: "Aiy",
-      role: "R&D Manager",
-      image: images.aiyZang,
     },
     {
       name: "Pepey",

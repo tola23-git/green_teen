@@ -1,6 +1,6 @@
 export const images = {
   teamCover:
-    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184978/team_cv.png",
+    "https://res.cloudinary.com/bvvlkx40/image/upload/v1791271090/TMC.png",
 
   leader:
     "https://res.cloudinary.com/bvvlkx40/image/upload/v1791184665/boss.png",
